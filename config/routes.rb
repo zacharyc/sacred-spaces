@@ -19,4 +19,6 @@ Rails.application.routes.draw do
   get "home/index", as: :home
   get "dashboard/show", as: :dashboard
   root "home#index"
+
+  resource :registration, only: %i[new create]
 end
